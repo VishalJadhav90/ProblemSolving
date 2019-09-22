@@ -20,6 +20,7 @@ def generate_schedule(job, dep_dict, sch, local_sch, local_job):
     elif job not in sch:
         sch.append(job)
 
+
 def print_build_order(projects, dependencies, dep_dict):
     for project in projects:
         dep_dict[project] = []
@@ -35,9 +36,9 @@ def print_build_order(projects, dependencies, dep_dict):
     print(sch)
 
 projects = ['a', 'b', 'c', 'd', 'e', 'f']
-dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c'), ('c', 'd')]
+dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c'), ('c', 'd')] #cyclic dependency
 dep_dict = {}
 print_build_order(projects, dependencies, dep_dict)
-dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c')]
+dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c')] #without cyclic dependency
 dep_dict = {}
 print_build_order(projects, dependencies, dep_dict)
