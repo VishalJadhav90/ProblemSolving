@@ -35,6 +35,9 @@ def print_build_order(projects, dependencies, dep_dict):
     print(sch)
 
 projects = ['a', 'b', 'c', 'd', 'e', 'f']
-dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c'),('c','d')]
+dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c'), ('c', 'd')]
+dep_dict = {}
+print_build_order(projects, dependencies, dep_dict)
+dependencies = [('a', 'd'), ('f', 'b'), ('b', 'd'), ('f', 'a'), ('d', 'c')]
 dep_dict = {}
 print_build_order(projects, dependencies, dep_dict)
