@@ -8,8 +8,8 @@ class Node:
         msg = "({},".format(self.value)
         left = "{},".format(self.left.value) if self.left else ","
         right = "{},".format(self.right.value) if self.right else ","
-        msg = msg + left + right
-        return msg[:-1] + ")"
+        msg = msg + left + right[:-1] + ')'
+        return msg
 
 
 class BinaryTree:
