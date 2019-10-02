@@ -27,7 +27,7 @@ class LinkedList:
                 return temp
         return temp
 
-     def print(self):
+    def print(self):
         pass
 
 obj=LinkedList(input_list=[1,2,3,4,5])
