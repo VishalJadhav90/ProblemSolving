@@ -19,6 +19,8 @@ def toss_win_number(n):
             n = (1<<p) | n
         if found_zero:
             frwd_count += 1
+    if (count-1) > win:
+        win = count - 1
     print(win)
 
 toss_win_number(1775)
